@@ -6,26 +6,6 @@ import (
 	"unsafe"
 )
 
-type EscSeq string
-const (
-    ESC = '\x1b'
-    CLEAR_SCREEN = "\x1b[2J"
-    CLEAR_LINE = "\x1b[K"
-    CURSOR_HOME = "\x1b[H"
-    HIDE_CURSOR = "\x1b[?25l"
-    SHOW_CURSOR = "\x1b[?25h"
-    ARROW_UP = "\x1b[A"
-    ARROW_DOWN = "\x1b[B"
-    ARROW_RIGHT = "\x1b[C"
-    ARROW_LEFT = "\x1b[D"
-    INVERTED_COLORS = "\x1b[7m"
-    RESTORE_COLORS = "\x1b[m"
-    FONT_BOLD = "\x1b[1m"
-    CURSOR_UNDERSCORE = "\x1b[4 q"
-    CURSOR_BLOCK = "\x1b[2 q"
-)
-
-
 type Terminal struct {
     Original Termios
     Modified *Termios
